@@ -1,0 +1,95 @@
+@import "src/templates/pages/index.sass";
+@import "src/styles/params";
+
+
+.desc-block-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 0 225px;
+
+    .desc-block-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 59px;
+        text-align: center;
+        margin-bottom: 120px;
+
+        .gradient-text {
+            background-image: $linearGradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .desc-block-cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: $maxWidth - 30;
+        z-index: 4;
+    }
+    .desc-block-decor {
+        position: absolute;
+        z-index: -1;
+        width: 757px;
+        height: 581px;
+    }
+    .left-decor {
+        margin-top: 330px;
+        margin-left: -150px;
+        left: 0;
+    }
+    .right-decor {
+        display: none;
+    }
+}
+@media screen and (max-width: $tabletWidth){
+    .desc-block-content {
+        padding: 100px 0 65px;
+
+        .desc-block-title {
+            font-size: 40px;
+            line-height: 47px;
+            margin-bottom: 50px;
+
+        }
+        .desc-block-cards {
+            width: $maxWidthTablet - 30;
+            flex-wrap: wrap;
+            z-index: 4;
+        }
+        .desc-block-decor {
+            width: 232px;
+            height: 200px;
+        }
+        .left-decor {
+            left: 35px;
+            margin-top: -420px;
+        }
+        .right-decor {
+            display: block;
+            right: 0;
+            margin-right: -80px;
+            bottom: -30px;
+
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth){
+    .desc-block-content {
+        padding: 0 0 65px;
+
+        .desc-block-title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .desc-block-cards {
+            width: 265px;
+        }
+        .desc-block-decor {
+            display: none;
+        }
+    }
+}

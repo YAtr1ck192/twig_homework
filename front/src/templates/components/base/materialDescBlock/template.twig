@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="desc-block-content">
+        <h2 class="desc-block-title">
+            Что такое <span class="gradient-text">EVA</span> коврики?
+        </h2>
+        <div class="desc-block-cards">
+            {#{% for card in cards %}
+                <div class="desc-block-card">
+                    <img src="card|img" alt="card-img" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">{{ card|title }}</h3>
+                        <div class="card-desc">{{ card|desc }}</div>
+                    </div>
+                </div>
+            {% endfor %}#}
+        </div>
+        <img
+                src="/img/desc-block-right-decor.png"
+                alt="desc-block-decor"
+                class="desc-block-decor right-decor"
+        >
+        <img
+                src="/img/desc-block-decor.png"
+                alt="desc-block-decor"
+                class="desc-block-decor left-decor"
+        >
+    </div>
+</div>

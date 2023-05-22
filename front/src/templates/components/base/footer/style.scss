@@ -1,0 +1,111 @@
+@import "src/templates/pages/index.sass";
+@import "src/styles/params";
+
+
+footer {
+    background: white;
+    padding: 20px 0 70px;
+
+    .container {
+        .footer-decor {
+            position: absolute;
+        }
+        .left-decor {
+            left: 0;
+            top: 62px;
+            width: 110px;
+            height: 125px;
+        }
+        .right-decor {
+            right: 0;
+            top: 0;
+            width: 233px;
+            height: 264px;
+        }
+        .footer-content {
+            padding: 150px 0 20px 0;
+            display: flex;
+
+            justify-content: space-evenly;
+
+            .footer-items {
+                display: flex;
+                flex-direction: column;
+
+                .footer-items-title {
+                    @include blackBoldText;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 10px;
+                }
+                .footer-social-icon {
+                    max-width: 33px;
+                    max-height: 33px;
+                }
+                .footer-link {
+                    @include r300;
+                    text-decoration: none;
+                    font-size: 14px;
+                    line-height: 15px;
+                    max-width: 224px;
+                    margin-bottom: 5px;
+                }
+                .town {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $tabletWidth) {
+    footer {
+        .container {
+            max-width: $tabletWidth;
+
+            .left-decor {
+                left: 85px;
+                top: 120px;
+                width: 85px;
+                height: 97px;
+            }
+            .right-decor {
+                top: 120px;
+                width: 40px;
+                height: 45px;
+            }
+            .footer-content {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth) {
+    footer {
+        padding: 60px 0 50px;
+
+        .container {
+            max-width: $phoneWidth;
+
+            .footer-decor {
+                display: none;
+            }
+            .footer-content {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+
+                .footer-items {
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    &:nth-child(2) {
+                        order: -1;
+                    }
+                }
+            }
+        }
+    }
+}
