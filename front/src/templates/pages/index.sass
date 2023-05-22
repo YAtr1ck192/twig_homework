@@ -1,0 +1,52 @@
+@import "src/styles/params.sass"
+
+@mixin defaultGreyText
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  line-height: 21px
+  color: #737373
+  text-decoration: none
+
+@mixin linearGradientButton
+  font-family: 'Roboto', sans-serif
+  font-size: 20px
+  font-weight: 900
+  line-height: 23px
+  text-align: center
+  color: white
+  background: $linearGradient
+  border: none
+  border-radius: 7px
+
+@mixin r300
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  color: black
+
+
+@mixin blackBoldText
+  font-family: 'Roboto', sans-serif
+  font-weight: 700
+  text-align: left
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.container
+  width: 100%
+  max-width: $maxWidth
+  margin: 0 auto
+  padding: 0 15px
+  position: relative
+
+@media screen and (max-width: $tabletWidth)
+  .container
+    max-width: 645px
+
+
+@media screen and (max-width: $phoneWidth)
+  .container
+    max-width: 330px
+

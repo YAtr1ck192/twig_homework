@@ -1,0 +1,81 @@
+.t-data-picker
+    width: 256px
+    background-color: #FEFEFE
+    border-radius: 4px
+    overflow: hidden
+    z-index: 2
+    &__header
+        padding: 16px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        line-height: rem(53)
+        font-weight: 500
+        cursor: pointer
+        svg
+            width: rem(20)
+            height: rem(21)
+            fill: none
+            stroke: #444444
+            transition: all .3s
+        &:hover
+            svg
+                stroke: #EB261A
+    &__inner
+        max-height: 0
+        transition: all .4s
+        &.isDataPickerVisible
+            max-height: 500px
+        .vc-container
+            border: none
+
+    .weekday-7,
+    .weekday-1
+        &:not(.is-not-in-month) > span:first-child
+            opacity: 0.5
+
+    .vc-highlight
+        border-radius: 4px !important
+        background-color: #EB261A !important
+    .vc-highlights
+        & + span:hover
+            background-color: transparent !important
+    @media screen and ( max-width: $mobile-size )
+        width: 100%
+        max-width: 288px
+        &__inner
+            display: flex
+            justify-content: center
+
+.t-filter
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    &-wrapper
+        position: relative
+    &-clear
+        margin-right: 32px
+        padding: 16px 0
+        letter-spacing: 0.015em
+        color: #A9AEBB
+        white-space: nowrap
+        transition: color .4s
+        cursor: pointer
+        span
+            display: block
+            padding-bottom: 4px
+            border-bottom: 1px solid #A9AEBB
+            transition: border-bottom .4s
+
+        &:hover
+            color: #EB261A
+            span
+                border-bottom: 1px solid #EB261A
+    @media screen and ( max-width: $mobile-size )
+        position: relative
+        flex-direction: column-reverse
+        align-items: center
+        &-clear
+            margin-top: 24px
+            padding: 0

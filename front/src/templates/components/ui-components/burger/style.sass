@@ -1,0 +1,59 @@
+.burger
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 16px
+    width: 32px
+    cursor: pointer
+
+    &__line
+        width: 32px
+        height: 2px
+        background-color: $white
+        position: absolute
+        
+        &:first-child
+            top: 0
+            transition: top .3s ease .3s, transform .3s ease 0s
+
+        &:nth-child(2)
+            top: calc(50% - 1px)
+
+        &:last-child
+            margin-bottom: 0px
+            top: calc(100% - 2px)
+            transition: top .3s ease .3s, transform .3s ease 0s
+        
+    &_opened
+        .burger__line:first-child
+            top: calc(50% - 1px)
+            transform: rotate(45deg)
+            transition: top .3s ease 0s, transform .3s ease .3s
+
+        .burger__line:nth-child(2)
+            display: none
+            
+        .burger__line:last-child
+            top: calc(50% - 1px)
+            transform: rotate(-45deg)
+            transition: top .3s ease 0s, transform .3s ease .3s
+
+@media screen and (min-width: 1475px)
+    .burger
+        height: 1.111vw
+        width: 2.222vw
+
+        &__line
+            width: 2.222vw
+            height: 2px
+            &:nth-child(2)
+                top: calc(50% - 1px)
+            &:last-child
+                top: calc(100% - 2px)
+
+        &_opened
+            .burger__line:first-child
+                top: calc(50% - 1px)
+            .burger__line:last-child
+                top: calc(50% - 1px)

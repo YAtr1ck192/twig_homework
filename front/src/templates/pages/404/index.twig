@@ -1,0 +1,12 @@
+{% extends firstLoad ? "@layouts/base.twig" : "@layouts/ajaxPage.twig" %}
+{% block content %}
+    <main id="e404">
+        <div class="e404">
+            <div class="e404__content">
+                <p class="e404__title">404</p>
+                <p class="e404__text font20">{{ t('app.front', 'Такой страницы не существует. Возможно, при вводе адреса была пропущена какая-то буква') }} </p>
+                <a v-link href="/" class="btn">{{ t('app.front', 'на главную') }}</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,66 @@
+.idea
+.vscode
+publick/dist
+node_modules
+#package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/core/vendor
++composer.lock
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
+
+/core/common/config/main-local.php
+/core/api/config/main-local.php
+/core/backend/config/main-local.php
+/core/frontend/config/main-local.php
+/core/common/cache/
+front/node_modules/
+/core/common/cacheLogCrafted/
+
+
+npm-debug.log
+
+# front/public/
+# !front/public/api/
+# !front/public/dist/
+# !front/public/img/
+
+front/public/**/index.html
+
+front/public/dist/main.min.js
+front/public/dist/main.min.js.map
+front/public/dist/main.min.css
+front/public/dist/main.min.css.map
+front/public/dist/*.map
+front/public/dist/*min.js
+front/public/dist/*.txt
+
+
+#vendors.min.js.LICENSE.txt
+

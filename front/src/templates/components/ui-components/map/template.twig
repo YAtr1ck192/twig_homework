@@ -1,0 +1,3 @@
+<map-cmp inline-template :coords="{{ coords|json_encode(constant('JSON_UNESCAPED_UNICODE'))|replace({'"': '\''})|raw }}">
+    <div class="map" id="map"></div>
+</map-cmp>

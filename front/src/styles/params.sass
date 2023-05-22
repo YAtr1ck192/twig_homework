@@ -1,0 +1,45 @@
+$maxWidth: 1220px
+$maxWidthTablet: 595px
+$maxWidthPhone: 265px
+$linearGradient: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 100%)
+$tabletWidth: 1320px
+$phoneWidth: 770px
+
+$logo-text: #404B67
+$menu-text: #424242
+$base-text: #2C2C2C
+$gray-text: #929292
+$gray-footer: #5B5B5B
+$green: #02B36E
+$blue: #00A8E8
+$dark-blue: #1E2849
+$gray: #E6E6E6
+$dark-gray: #6D6D6D
+$error: #EC7C7C
+$white: #ffffff
+
+$dark-blue-lk: #1E253B
+
+$bg: #F2F2F2
+
+$window-width: 320
+
+// для резиновой верстки, преобразует пиксели в vw
+@function vw($pixels, $window-width: $window-width)
+    @if (unitless($pixels))
+        $pixels: $pixels * 1px
+    @if (unitless($window-width))
+        $window-width: $window-width * 1px
+    @return ($pixels* 100) / $window-width * 1vw
+
+$browser-context: 16
+
+// text px to rem
+@function rem($pixels, $context: $browser-context)
+    @return #{$pixels/$context}rem
+
+$mobile-size: 920px // макет 320
+$tablet-size: 1160px // макет 1024
+$desktop-small: 1300px // макет 1280
+$desktop-medium: 1600px // макет 1920
+$desktop-big: 2000px // макет 2560

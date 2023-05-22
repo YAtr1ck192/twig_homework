@@ -1,0 +1,177 @@
+.t-filter
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        top: -1px
+        left: 0
+        width: calc(100% - 12px)
+        height: 48px
+        background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%)
+        pointer-events: none
+        z-index: 1
+    &:after
+        content: ''
+        position: absolute
+        bottom: 55px
+        left: 0
+        width: calc(100% - 12px)
+        height: 48px
+        background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%)
+        pointer-events: none
+        z-index: 1
+
+    &__container
+        padding: 40px 32px 16px 48px
+        background: $bg
+        max-height: calc(100vh - 194px - 90px)
+        overflow: hidden
+        overflow-y: auto
+
+    &__category
+        margin-bottom: 32px
+        color: rgba(0, 0, 0, 0.7)
+        &._open
+            .t-filter__category-title-text
+                font-weight: 500
+                color: $black
+            .t-filter__arrow
+                transform: rotate(180deg)
+                path
+                    stroke: $black
+
+        &-title
+            align-items: flex-start
+            cursor: pointer
+            &-text
+                transition: all .3s
+
+    &__arrow
+        transition: all .3s
+        margin-left: 12px
+        min-width: 10px
+        margin-top: 6px
+        path
+            transition: all .3s
+
+    &-list
+        margin-top: 24px
+        position: relative
+        &._scroll
+            &:after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: calc(100% - 12px)
+                height: 48px
+                background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%)
+                pointer-events: none
+                z-index: 1
+        &__container
+            max-height: 360px
+            overflow-y: auto
+        &__item
+            &:not(:last-child)
+                margin-bottom: 24px
+        &__input
+            &:checked:not(._all) + .t-filter-list__label:before,
+            &._checked + .t-filter-list__label:before
+                background: #D9EDFF
+                border-color: #D9EDFF
+            &:checked:not(._all) + .t-filter-list__label .t-filter-list__ok,
+            &._checked + .t-filter-list__label .t-filter-list__ok
+                opacity: 1
+        &__label
+            padding-left: 36px
+            min-height: 24px
+            position: relative
+            cursor: pointer
+            &:before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                width: 22px
+                height: 22px
+                border: 1px solid rgba($gray-text, .3)
+                transition: all .2s
+        &__ok
+            position: absolute
+            left: 6px
+            top: 8px
+            z-index: 1
+            opacity: 0
+            transition: all .2s
+
+
+    &__reset
+        margin-top: 32px
+        font-size: 14px
+        line-height: 20px
+        color: $text
+        opacity: 0.3
+        width: fit-content
+        padding-bottom: 2px
+        border-bottom: 1px solid #666666
+        cursor: pointer
+
+@media (max-width: 1480px)
+    .t-filter
+        &:after, &:before
+            height: 32px
+        &__container
+            padding: 32px 24px 8px 32px
+            max-height: calc(100vh - 164px - 80px)
+        &__category
+            margin-bottom: 26px
+        &-list
+            margin-top: 20px
+            &__item
+                &:not(:last-child)
+                    margin-bottom: 20px
+
+@media (max-width: 1240px)
+    .t-filter
+        &:before
+            height: 28px
+        &:after
+            bottom: 37px
+            height: 28px
+        &__container
+            padding: 24px 16px 0 24px
+        &__category
+            margin-bottom: 16px
+            &-title
+                &-text
+                    font-size: 13px
+        &-list
+            margin-top: 16px
+            &__container
+                max-height: 304px
+            &__item
+                &:not(:last-child)
+                    margin-bottom: 16px
+        &__reset
+            margin-top: 16px
+
+@media (max-width: 1000px)
+    .t-filter
+        &__container
+            max-height: 100%
+
+@media (max-width: 767px)
+    .t-filter
+        padding-bottom: 20px
+        background: $bg
+        &:before, &:after
+            display: none
+        &__container
+            padding: 16px 16px 0
+        &__category
+            margin-bottom: 20px
+            &-title
+                &-text
+                    font-size: 14px
+        &__reset
+            margin: 16px auto 0

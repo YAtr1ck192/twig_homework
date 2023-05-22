@@ -1,0 +1,23 @@
+<selector-cmp 
+    inline-template
+    selector-key="{{ key|raw }}"
+    :items="{{ item|json_encode(constant('JSON_UNESCAPED_UNICODE'))|replace({'"': '\''})|raw }}"  
+    @set-selector="onChooseSelect"
+    >
+    <div class="t-form-selector {{ class }} " :class="{isOpen: selectorVisible}" v-click-outside="closeSelector">
+        <div class="t-form-selector__header" @click="toogleSelector">
+            <span>{{ '{{ selectorTitle }}' }}</span>
+        </div>
+        <ul class="t-form-selector__list">
+            <li 
+                v-for="item in selector" 
+                class="t-form-selector__item" 
+                :key="item.id" :id="item.id" 
+                @click="chooseSelect(item.id)"
+                >
+                <span>{{ '{{ item.title }}' }}</span>
+            </li>
+        </ul>
+    </div>
+</selector-cmp>
+

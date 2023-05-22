@@ -1,0 +1,19 @@
+<div class="t-breadcrumbs">
+    {% for item in breadcrumbs %}
+        {% if item.link %}
+            <a 
+                v-link 
+                href="{{ item.link }}" 
+                key="{{ item.link }}" 
+                class="t-breadcrumbs__item _hover"
+                >{{ item.title }}
+            </a>
+        {% else %}
+            <span 
+                key="{{ item.title }}" 
+                class="t-breadcrumbs__item"
+                >{{ item.title }}
+            </span>
+        {% endif %}
+    {% endfor %}
+</div>

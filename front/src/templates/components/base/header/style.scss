@@ -1,0 +1,50 @@
+@import "src/templates/pages/index.sass";
+@import "src/styles/params";
+
+.header-content{
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+  a .header-logo{
+    width: 270px;
+    height: 60px;
+}
+nav{
+  .nav-item{
+    @include defaultGreyText;
+    margin-left: 25px;
+    font-size: 18px;
+  }
+    &:first-child{}
+      margin-left: 0;
+    }
+
+
+
+
+@media screen and (max-width: $tabletWidth) {
+  .header-content {
+    nav {
+      .nav-item {
+        display: none;
+
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: $phoneWidth) {
+  .header-content {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+

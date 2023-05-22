@@ -1,0 +1,111 @@
+// новая анимация по дата атрибутам
+[data-animate]
+    transition: transform .6s .0s, opacity .6s
+    opacity: 0
+
+$directions: ("bottom": "translateY(50px)", "right": "translateX(50px)", "left": "translateX(-50px)", "top": "translateY(-50px)")
+
+@each $name, $transform in $directions
+    [data-animate-direction="#{$name}"]
+        transform: #{$transform}
+
+//[data-delay="true"]
+//    @for $i from 1 through 20
+//        &:nth-child(#{$i})
+//            transition-delay: #{ .2 + 0.15*$i }s
+//
+//[data-animate="true"]
+//    opacity: 1
+//    transform: translate3d(0, 0, 0)
+
+[data-animate="true"]:not([data-delay="true"])
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+
+.fade-enter-active, .fade-leave-active
+    transition: opacity .4s
+
+.fade-enter, .fade-leave-to
+    opacity: 0
+
+.page-enter-active
+    transition: transform .8s, opacity .6s
+    transition-delay: .0s
+    position: fixed !important
+    left: 0 !important
+    top: 0 !important
+    transform: translateX(100%)
+    opacity: 0
+
+.page-enter-to
+    transform: translateX(0)
+    background-attachment: scroll !important
+    height: 100vh
+    overflow: hidden
+    opacity: 1
+    z-index: 1
+
+.page-leave-active
+    transition: transform .8s, opacity .5s
+
+.page-leave-to
+    transform: translateX(-100%)
+    opacity: 0
+
+
+.fadeRight-enter-active, .fadeLeft-enter-active
+    transition: transform .6s, opacity .6s
+    transform: translateX(0%)
+.fadeRight-enter, .fadeLeft-leave-to
+    transform: translateX(100%)
+    opacity: 0
+.fadeRight-leave-active, .fadeLeft-leave-active
+    transition: transform .6s, opacity .6s
+    position: absolute
+    top: 0
+    width: 100%
+.fadeRight-leave-to, .fadeLeft-enter
+    transform: translateX(-100%)
+    opacity: 0
+
+.fadeChange-enter-active
+    transition: opacity .4s .15s
+.fadeChange-leave-active
+    position: absolute
+    width: 100%
+    transition: opacity .4s
+.fadeChange-enter, .fadeChange-leave-to
+    opacity: 0
+
+.fadeHeight-enter-active
+    transition: max-height 1.5s, opacity .6s
+    max-height: 2000px
+    overflow: hidden
+.fadeHeight-leave-active
+    transition: max-height .6s, opacity .6s
+    max-height: 2000px
+    overflow: hidden
+.fadeHeight-enter,
+.fadeHeight-leave-to
+    opacity: 0
+    max-height: 0
+    overflow: hidden
+
+.fadeTop-enter, .fadeTop-leave-to
+    transform: translateY(-100px)
+    opacity: 0
+.fadeTop-enter-active, .fadeTop-leave-active
+    transition: all .4s
+.fadeTop-enter-to, .fadeTop-leave
+    transform: translateY(0)
+    opacity: 1
+
+.fadeDown-enter, .fadeDown-leave-to
+    transform: translateY(100%)
+    opacity: 0
+.fadeDown-enter-active, .fadeDown-leave-active
+    transition: all .5s
+.fadeDown-enter-to, .fadeDown-leave
+    transform: translateY(0)
+    opacity: 1

@@ -1,0 +1,40 @@
+.t-share-social
+    display: flex
+    align-items: center
+    &__title
+        margin-right: 32px
+        font-size: rem(14)
+        font-weight: 700
+        color: #7d7e80
+        letter-spacing: .1em
+        text-transform: uppercase
+    &__items
+        display: flex
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 26px
+        height: 26px
+        border-radius: 50%
+        background-color: #B8B8C5
+        font-size: 0
+        overflow: hidden
+        filter: grayscale(1)
+        transition: all .3s
+        svg
+            fill: #ffffff
+        &:hover
+            background-color: #EB261A
+        &:not(:last-child)
+            margin-right: 16px
+    @media screen and ( max-width: $mobile-size)
+        flex-direction: column
+        text-align: center
+        &__title
+            margin-right: 0
+            margin-bottom: 24px
+            font-size: 22px
+        &__item
+            width: 36px
+            height: 36px

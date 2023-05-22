@@ -1,0 +1,52 @@
+.t-form-selector
+    position: relative
+    font-size: rem(14)
+    cursor: pointer
+    &__header
+        line-height: rem(38)
+        padding: 0 rem(16)
+        color: #212227
+        border: 1px solid #e1e1e1
+        border-bottom: none
+        &:after
+            margin: auto
+            content: ''
+            position: absolute
+            right: rem(16)
+            top: 0
+            bottom: 0
+            display: block
+            width: 0
+            height: 0
+            border-bottom: 4px solid #ccc
+            border-left: 4px solid transparent
+            border-right: 4px solid transparent
+            border-top: none
+            transition: all .4s
+
+    &__list
+        position: absolute
+        top: 98%
+        left: 0
+        right: 0
+        max-height: 0
+        border: 1px solid #e1e1e1
+        border-top: 1px solid transparent
+        transition: all .4s, border 0s .35s
+        overflow: hidden
+        z-index: 2
+    &__item
+        padding: 0 rem(16)
+        line-height: rem(32)
+        background-color: #ffffff
+        transition: all .3s
+        &:hover
+            background-color: #aec5f5
+
+    &.isOpen &__header:after
+        transform: rotate(180deg)
+
+    &.isOpen &__list
+        max-height: 200px
+        border: 1px solid #e1e1e1
+        transition: all .4s, border 0s

@@ -1,0 +1,67 @@
+.t-pagination
+    justify-content: flex-start
+    margin-top: 68px
+
+    &__prev, &__next
+        position: relative
+        width: 60px
+        height: 60px
+        background-color: $bg
+        display: flex
+        justify-content: center
+        align-items: center
+        svg path
+            transition: all .3s
+        &:hover
+            svg path
+                stroke: $blue
+        &._disabled
+            pointer-events: none
+            opacity: .4
+
+    &-list
+        display: flex
+        &__link
+            width: 60px
+            height: 60px
+            background-color: $bg
+            color: #000000
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 18px
+            letter-spacing: 0.05em
+            font-family: 'Sansation', sans-serif
+
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 60px
+        height: 60px
+        background-color: $bg
+        color: #000000
+        font-size: 18px
+        transition: .3s
+        cursor: pointer
+        &:hover
+            color: $blue
+            
+        &_active
+            color: $blue
+            background-color: #EEF8FF
+
+@media (max-width: 1240px)
+    .t-pagination
+        margin-top: 32px
+        &__prev, &__next
+            width: 48px
+            height: 48px
+        &-list
+            &__link
+                width: 48px
+                height: 48px
+        &__item
+            width: 48px
+            height: 48px
+            font-size: 14px

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html prefix="og: //ogp.me/ns#">
+<head>
+    <meta charset="utf-8"/>
+    {% block head %} {% endblock %}
+    {{ head|raw }}
+    <meta name="viewport" content="width=device-width"/>
+
+    {# favicon #}
+{#    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">#}
+{#    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">#}
+{#    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">#}
+{#    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">#}
+{#    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#ffdf31">#}
+{#    <meta name="msapplication-TileColor" content="#da532c">#}
+{#    <meta name="theme-color" content="#ffffff">#}
+
+    {# og #}
+{#    <meta property="og:image" content="http://aic.deploy.tdsgn.ru/assets/img/logo.png"/>#}
+{#    <meta property="og:image:secure_url" content="http://aic.deploy.tdsgn.ru/assets/img/logo.png"/>#}
+{#    <meta property="og:image:type" content="image/png"/>#}
+{#    <meta property="og:image:width" content="240px"/>#}
+{#    <meta property="og:image:height" content="240px"/>#}
+{#    <meta property="og:image:alt" content="GrossMarket"/>#}
+{#    <meta property="og:title" content="GrossMarket"/>#}
+{#    <meta property="og:type" content="website"/>#}
+{#    <meta property="og:url" content="http://aic.deploy.tdsgn.ru"/>#}
+{#    <meta property="og:description" content="GrossMarket"/>#}
+    <meta name="cmsmagazine" content="d5fdaae2e783795c41b7b5df1a6739b1"/>
+
+</head>
+
+<body>
+<div id="app" :class="{_visible: loadVue}">
+    {% include "@components/base/header/template.twig" with menu %}
+    {% include "@components/base/promoBlock/template.twig" with menu %}
+
+    {% include "@components/base/footer/template.twig" %}
+    {% include "@components/base/curtain/template.twig" %}
+{#    <modal-cmp></modal-cmp>#}
+</div>
+
+<script>
+    {# перемная содержащая все статические переводы для компонентов #}
+    {#var staticText = {{ staticText|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};#}
+    {#var locale = {{ locale|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};#}
+
+</script>
+
+{% block body_end %} {% endblock %}
+{{ body|raw }}
+</body>
+</html>

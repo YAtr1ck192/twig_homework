@@ -1,0 +1,31 @@
+.t-breadcrumbs
+    font-size: 0
+    &__item
+        font-size: rem(14)
+        letter-spacing: 0.035em
+        color: #B8B8C5
+
+        &:not(:first-child)
+            margin-left: 8px
+            padding-left: 12px
+            position: relative
+            &:before
+                position: absolute
+                content: ''
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 4px
+                height: 4px
+                border-radius: 50%
+                background-color: #B8B8C5
+    @media screen and ( max-width: $mobile-size)
+        display: flex
+        &__item
+            font-size: rem(12)
+            white-space: nowrap
+            flex-shrink: 0
+            overflow: hidden
+            &:last-child
+                flex-shrink: 1
+                text-overflow: ellipsis

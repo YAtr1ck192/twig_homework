@@ -1,0 +1,12 @@
+<picture class="t-picture {{img.class}}"
+    {% if img.loading %}{% else %}v-lazyload{% endif %}
+    >
+    {% if img.default %} 
+        {% if img.webp %}
+            <source type="image/webp"
+        {% if img.loading %}srcset{% else %}data-srcset{% endif %}="{{img.webp}}">
+        {% endif %}
+        <source  {% if img.loading %}srcset{% else %}data-srcset{% endif %}="{{img.default}}">
+        <img {% if img.loading %}src{% else %}data-src{% endif %}="{{img.default}}" alt="{{img.title}}">
+    {% endif %}   
+</picture>

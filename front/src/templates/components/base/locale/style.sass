@@ -1,0 +1,86 @@
+.t-locale
+    position: relative
+    @media screen and (max-width: 1024px)
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__select
+        outline: none
+        font-size: 16px
+        line-height: 1.2
+        background: transparent
+        border: none
+        text-transform: uppercase
+        color: rgba(#FFFFFF, .8)
+        padding-bottom: 3px
+        border-radius: 0
+        border-bottom: 1px solid #ffffff
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        margin-right: 8px
+
+    &__active
+        padding: 12px
+        font-size: 14px
+        line-height: 19px
+        cursor: pointer
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        display: flex
+        align-items: center
+
+        &-text
+            padding-bottom: 4px
+            margin-bottom: -4px
+            border-bottom: 1px solid rgba(#FFFFFF, .8)
+
+    &__links
+        padding: 12px
+        position: absolute
+        top: 100%
+        left: 0
+        background: #ffffff
+        color: #000000
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    &__link
+        background: transparent
+        border: none
+        font-size: 14px
+        line-height: 19px
+        outline: none
+        cursor: pointer
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        display: flex
+        align-items: center
+
+        &._active
+            display: none
+
+    &__svg
+        margin-left: 6px
+        transition: all .3s
+
+        &._active
+            transform: rotate(180deg)
+
+    @media (min-width: 1920px)
+        .t-locale
+            &__active, &__link
+                font-size: 18px
+
+            &__svg
+                width: 17px
+                height: 9px
+
+    @media (max-width: 767px)
+        .t-locale
+            &__svg
+                margin-bottom: 1px
+                margin-left: 0
