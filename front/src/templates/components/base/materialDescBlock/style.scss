@@ -29,6 +29,39 @@
         justify-content: space-between;
         width: $maxWidth - 30;
         z-index: 4;
+
+        .desc-block-card {
+            width: 344px;
+            min-height: 414px;
+            border-radius: 9px;
+            box-shadow: 0 1px 15px #fab8db;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            background: white;
+
+            .card-img {
+                width: 363px;
+                height: 207px;
+                background-size: cover;
+            }
+            .card-content {
+                padding: 10px 33px 22px 22px;
+
+                .card-title {
+                    @include blackBoldText;
+                    font-size: 36px;
+                    line-height: 42px;
+                    margin-bottom: 5px;
+                }
+                .card-desc {
+                    @include defaultGreyText;
+                    font-size: 14px;
+                }
+            }
+        }
     }
     .desc-block-decor {
         position: absolute;
@@ -59,6 +92,25 @@
             width: $maxWidthTablet - 30;
             flex-wrap: wrap;
             z-index: 4;
+
+            .desc-block-card {
+                width: $maxWidthTablet;
+                min-height: 325px;
+                margin-bottom: 60px;
+
+                .card-img {
+                    width: $maxWidthTablet;
+                    height: 160px;
+                    background-size: cover;
+                    object-fit: cover;
+                }
+                .card-content {
+
+                    .card-desc {
+                        max-width: 500px;
+                    }
+                }
+            }
         }
         .desc-block-decor {
             width: 232px;
@@ -87,6 +139,26 @@
         }
         .desc-block-cards {
             width: 265px;
+
+            .desc-block-card {
+                width: $maxWidthPhone;
+                max-height: 400px;
+                margin-bottom: 35px;
+
+                .card-img {
+                    width: $maxWidthPhone;
+                    height: 160px;
+                }
+
+                .card-content {
+                    padding: 15px 20px 20px;
+
+                    .card-title {
+                        font-size: 30px;
+                        line-height: 35px;
+                    }
+                }
+            }
         }
         .desc-block-decor {
             display: none;
