@@ -6,9 +6,9 @@
                 <img src="/img/header-logo.png" alt="header-logo" class="header-logo">
             </a>
             <nav>
-                <a href="#" class="nav-item">отзывы</a>
-                <a href="#" class="nav-item">что это?</a>
-                <a href="#" class="nav-item">контакты</a>
+                {% for navItem in navItems %}
+                    <a href="{{navItem.navLink}}" class="nav-item">{{navItem.navContent}}</a>
+                {% endfor %}
             </nav>
         </div>
     </div>

@@ -1,5 +1,19 @@
 /* eslint-disable no-unused-vars */
 const data = {
+    navItems: [
+        {
+            navLink: '#reviews',
+            navContent: 'отзывы'
+        },
+        {
+            navLink: '#desc',
+            navContent: 'что это?'
+        },
+        {
+            navLink: '#footer',
+            navContent: 'контакты'
+        },
+    ],
     descCards: [
         {
             img: '/img/desc-block-card-img-1.png',

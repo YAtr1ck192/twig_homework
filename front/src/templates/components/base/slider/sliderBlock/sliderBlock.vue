@@ -1,5 +1,5 @@
 <template>
-    <div class="slider">
+    <div class="slider" id="reviews">
         <div
             v-if="screenWidth > 1320"
             class="slider-track"
