@@ -1,6 +1,17 @@
 {% extends firstLoad ? "@layouts/base.twig" : "@layouts/ajaxPage.twig" %}
 {% block content %}
     <main>
-
+        {% include "@components/base/promoBlock/template.twig" with menu %}
+        {% include "@components/base/materialDescBlock/template.twig" with menu %}
+        <slider-block />
     </main>
 {% endblock %}
+
+<script>
+    import SliderBlock from "../components/base/slider/sliderBlock/sliderBlock";
+    export default {
+        components: {
+            SliderBlock,
+        }
+    }
+</script>

@@ -39,14 +39,14 @@ const data = {
         {
             slides: [
                 {
-                    slideImg: '/images/slide-img-1.png',
+                    slideImg: '/img/slide-img-1.png',
                     slideDesc:
                         'Коврики супер!!! Качество на высшем уровне!!!' +
                         'Удачи и побольше заказов вам!!! Большое спасибо!',
                     slideUserName: 'Константин В.'
                 },
                 {
-                    slideImg: '/images/slide-img-2.png',
+                    slideImg: '/img/slide-img-2.png',
                     slideDesc:
                         'Покупала у ребят коврики для Хундай солярис в' +
                         ' подарок молодому человеку. Все очень' +
@@ -54,7 +54,7 @@ const data = {
                     slideUserName: 'Вера К.'
                 },
                 {
-                    slideImg: '/images/slide-img-3.png',
+                    slideImg: '/img/slide-img-3.png',
                     slideDesc:
                         'Спасибо, все приехало, поставил. Результатом ' +
                         'доволен, в машине супер! Заказывал на Ниссан.',

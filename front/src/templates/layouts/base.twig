@@ -33,9 +33,18 @@
 <body>
 <div id="app" :class="{_visible: loadVue}">
     {% include "@components/base/header/template.twig" with menu %}
-    {% include "@components/base/promoBlock/template.twig" with menu %}
-    {% include "@components/base/materialDescBlock/template.twig" with menu %}
-
+    <transition name="page">
+        <keep-alive>
+            {#            <router-view class="t-page t-container" :class="pageClass">#}
+            <router-view>
+                <div id="content" v-if="false">
+                    <transition>
+                        {% block content %} {% endblock %}
+                    </transition>
+                </div>
+            </router-view>
+        </keep-alive>
+    </transition>
     {% include "@components/base/footer/template.twig" %}
     {% include "@components/base/curtain/template.twig" %}
 {#    <modal-cmp></modal-cmp>#}
@@ -47,7 +56,6 @@
     {#var locale = {{ locale|json_encode(constant('JSON_UNESCAPED_UNICODE'))|raw }};#}
 
 </script>
-
 {% block body_end %} {% endblock %}
 {{ body|raw }}
 </body>

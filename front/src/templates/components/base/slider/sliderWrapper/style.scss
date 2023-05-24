@@ -1,0 +1,24 @@
+@import "src/templates/pages/index.sass";
+@import "src/styles/params";
+
+
+.slider-wrapper {
+    max-width: $maxWidth;
+
+
+    .swiper {
+        width: 1748px;
+        margin-left: -263px;
+
+        .swiper-slide {
+            opacity: .4;
+            max-width: 536px;
+
+            &.swiper-slide-active {
+                transition: ease-in-out .3s;
+                opacity: 1;
+            }
+        }
+    }
+
+}

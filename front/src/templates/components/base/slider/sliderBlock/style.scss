@@ -1,0 +1,45 @@
+@import "src/templates/pages/index.sass";
+@import "src/styles/params";
+
+.slider {
+    width: 100%;
+    min-height: 357px;
+    background: linear-gradient(95.2deg, rgba(185, 1, 96, 0.25) 2.23%, rgba(46, 49, 146, 0.25) 100%);
+    padding: 55px 0;
+    overflow: hidden;
+
+    .slider-track {
+        max-width: 1748px;
+        max-height: 247px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+    p {
+        color: red;
+    }
+}
+@media screen and (max-width: $tabletWidth){
+    .slider {
+        padding: 40px 0 20px;
+        .slider-on-media {
+            margin: 0 auto;
+            max-width: 536px;
+
+            .slide {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth){
+    .slider {
+
+        .slider-on-media {
+            max-width: 270px;
+
+            .slide {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
