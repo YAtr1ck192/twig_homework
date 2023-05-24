@@ -24,6 +24,7 @@
 import sliderWrapper from "@src/templates/components/base/slider/sliderWrapper/sliderWrapper.vue";
 import slideCard from "@src/templates/components/base/slider/sliderCard/sliderCard.vue";
 
+
 export default {
     name: "sliderBlock",
     data () {
@@ -56,10 +57,9 @@ export default {
         slideCard
     },
     computed: {
-        screenWidth: function () {
-            return window.screen.width
+        screenWidth () {
+            return window.screen.width;
         }
-
     }
 }
 </script>

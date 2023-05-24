@@ -15,7 +15,6 @@
 
 <script>
 import {swiperSlide, swiper} from "vue-awesome-swiper/src";
-/*import "@src/styles/vendors/swiper.css";*/
 
 import slideCard from "../sliderCard/sliderCard.vue";
 
