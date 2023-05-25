@@ -1,10 +1,10 @@
 <div class="container">
     <div class="desc-block-content" id="desc">
         <h2 class="desc-block-title">
-            {{ descTitle.blockTitle }}
+            {{ descBlock.title }}
         </h2>
         <div class="desc-block-cards">
-            {% for item in descCards %}
+            {% for item in descBlock.descCards %}
                 <div class="desc-block-card">
                     <img src="{{ item.img }}" alt="card-img" class="card-img">
                     <div class="card-content">
