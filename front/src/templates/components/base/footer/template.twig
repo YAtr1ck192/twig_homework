@@ -6,27 +6,28 @@
                 class="footer-decor left-decor"
         >
         <div class="footer-content">
-            <div class="footer-items">
-                <div class="footer-items-title">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</div>
-                <a href="#">
-                    <img
-                            src="/img/footer-social-icon.png"
-                            alt="footer-social-icon"
-                            class="footer-social-icon"
-                    >
-                </a>
-            </div>
-            <div class="footer-items">
-                <div class="footer-items-title">КОНТАКТНЫЕ ТЕЛЕФОНЫ</div>
-                <a href="#" class="footer-link">+375 29 292-29-29 (VEL)</a>
-                <a href="#" class="footer-link">+375 33 333-33-33 (МТС)</a>
-            </div>
-            <div class="footer-items">
-                <div class="footer-items-title">О НАС</div>
-                <a href="#" class="footer-link">Индивидуальное изготовление EVA ковриков для вашего автомобиля</a>
-                <a href="#" class="footer-link town">ваш город</a>
-            </div>
-
+            {% for item in footer %}
+                <div class="footer-items">
+                    <div class="footer-items-title">{{ item.social.title }}</div>
+                    <a href="#">
+                        <img
+                                src="{{ item.social.img }}"
+                                alt="footer-social-icon"
+                                class="footer-social-icon"
+                        >
+                    </a>
+                </div>
+                <div class="footer-items">
+                    <div class="footer-items-title">{{ item.phones.title }}</div>
+                    <a href="#" class="footer-link">{{ item.phones.phone1 }}</a>
+                    <a href="#" class="footer-link">{{ item.phones.phone2 }}</a>
+                </div>
+                <div class="footer-items">
+                    <div class="footer-items-title">{{ item.aboutUs.title }}</div>
+                    <a href="#" class="footer-link">{{ item.aboutUs.desc }}</a>
+                    <a href="#" class="footer-link town">{{ item.aboutUs.town }}</a>
+                </div>
+            {% endfor %}
         </div>
         <img
                 src="/img/footer-right-decor.png"
