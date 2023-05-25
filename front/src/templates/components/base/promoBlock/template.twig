@@ -1,33 +1,33 @@
 <div class="container">
-    <div class="promo-content">
-        <div class="left-part">
-            <h1 class="promo-title">
-                Инновационные коврики
-                для автомобиля
-            </h1>
-            <p class="promo-desc">в вашем городе</p>
-            <button>ЗАКАЗАТЬ</button>
-        </div>
-        <img
-                src="/img/promo-block-bottom-decor.png"
-                alt="promo-block-bottom-decor"
-                class="promo-block-bottom-decor"
-        >
-        <img
-                src="/img/promo-block-top-decor.png"
-                alt="promo-block-top-decor"
-                class="promo-block-top-decor"
-        >
-        <div class="promo-main-img">
+    {% for item in promoBlock %}
+        <div class="promo-content">
+            <div class="left-part">
+                <h1 class="promo-title">
+                    {{ item.promoData.title }}
+                </h1>
+                <p class="promo-desc">{{ item.promoData.desc }}</p>
+                <button>ЗАКАЗАТЬ</button>
+            </div>
             <img
-                    src="/img/promo-img.png"
-                    alt="promo-img"
+                    src="/img/promo-block-bottom-decor.png"
+                    alt="promo-block-bottom-decor"
+                    class="promo-block-bottom-decor"
             >
             <img
-                    src="/img/promo-main-decor.png"
-                    alt="promo-main-decor"
+                    src="/img/promo-block-top-decor.png"
+                    alt="promo-block-top-decor"
+                    class="promo-block-top-decor"
             >
+            <div class="promo-main-img">
+                <img
+                        src="/img/promo-img.png"
+                        alt="promo-img"
+                >
+                <img
+                        src="/img/promo-main-decor.png"
+                        alt="promo-main-decor"
+                >
+            </div>
         </div>
-
-    </div>
+    {% endfor %}
 </div>

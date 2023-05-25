@@ -1,15 +1,15 @@
 <div class="container">
     <div class="desc-block-content" id="desc">
         <h2 class="desc-block-title">
-            Что такое <span class="gradient-text">EVA</span> коврики?
+            {{ descTitle.blockTitle }}
         </h2>
         <div class="desc-block-cards">
-            {% for descCard in descCards %}
+            {% for item in descCards %}
                 <div class="desc-block-card">
-                    <img src="{{ descCard.img }}" alt="card-img" class="card-img">
+                    <img src="{{ item.img }}" alt="card-img" class="card-img">
                     <div class="card-content">
-                        <h3 class="card-title">{{ descCard.title }}</h3>
-                        <div class="card-desc">{{ descCard.desc }}</div>
+                        <h3 class="card-title">{{ item.title }}</h3>
+                        <div class="card-desc">{{ item.desc }}</div>
                     </div>
                 </div>
             {% endfor %}

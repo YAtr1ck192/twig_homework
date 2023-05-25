@@ -1,5 +1,19 @@
 /* eslint-disable no-unused-vars */
 const data = {
+    headerSocialData: [
+        {
+            phones: {
+                phone1: '+375 29 292-29-29 (VEL)',
+                phone2: '+375 33 333-33-33 (МТС)'
+            },
+            town: {
+                townName: 'ваш город'
+            },
+            social: {
+                socialData: 'посетите нашу <br> страницу'
+            }
+        }
+    ],
     navItems: [
         {
             navLink: '#reviews',
@@ -14,6 +28,17 @@ const data = {
             navContent: 'контакты'
         },
     ],
+    promoBlock: [
+        {
+            promoData: {
+                title: 'Инновационные коврики для автомобиля',
+                desc: 'в вашем городе'
+            },
+        }
+    ],
+    descTitle: {
+        blockTitle: 'Что такое <span class="gradient-text">EVA</span> коврики?'
+    },
     descCards: [
         {
             img: '/img/desc-block-card-img-1.png',
@@ -49,4 +74,26 @@ const data = {
                 ' ленты.'
         }
     ],
+    slides: [
+        {
+            img: '/img/slide-img-1.png',
+            desc: 'Коврики супер!!! Качество на высшем уровне!!!' +
+                'Удачи и побольше заказов вам!!! Большое спасибо!',
+            userName: 'Константин В.'
+        },
+        {
+            img: '/img/slide-img-2.png',
+            desc: 'Покупала у ребят коврики для Хундай солярис в' +
+                ' подарок молодому человеку. Все очень' +
+                ' понравилось. Буду советовать только вас.',
+            userName: 'Вера К.'
+        },
+        {
+            img: '/img/slide-img-3.png',
+            desc: 'Спасибо, все приехало, поставил. Результатом ' +
+                'доволен, в машине супер! Заказывал на Ниссан.',
+            userName: 'Николай П.'
+        },
+    ]
+
 };
